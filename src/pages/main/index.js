@@ -23,11 +23,13 @@ class Main extends Component {
 
   handleAddRepository = (event) => {
     event.preventDefault();
-    this.props.addFavorite();
+    const { addFavorite } = this.props;
+    addFavorite();
   }
 
   render() {
     const { repositoryInput } = this.state;
+    const { favorites } = this.props;
     return (
       <Fragment>
         <form onSubmit={this.handleAddRepository}>
@@ -39,7 +41,7 @@ class Main extends Component {
           <button type="submit">Adicionar</button>
         </form>
         <ul>
-          {this.props.favorites.map(favorite => (
+          {favorites.map(favorite => (
             <li key={favorite.id}>
               <p>
                 <strong>{favorite.name}</strong> {favorite.description}

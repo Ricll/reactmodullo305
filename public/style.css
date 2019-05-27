@@ -15,6 +15,12 @@ body {
   font-family: sans-serif;
 }
 
+p {
+  display: flex;
+  margin-top: 15px;
+  font-size: 20px;
+}
+
 li {
   display: flex;
   margin-top: 10px;
